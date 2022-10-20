@@ -1,0 +1,59 @@
+body {
+    background-color: #EDF7BF;
+}
+.titulo {
+    width: 100%;
+    height: 63px;
+    text-align: center;
+}
+.texto {
+    margin: 40px auto;
+    font-family: Roboto;
+    font-size: 56px;
+    color: #75B79E; 
+}
+.cartas {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 47px; 
+    margin-right: 120px;
+    margin-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.carta {
+    width: 117px;
+    height: 146px;
+    margin-top: 34px;
+    margin-left: 17px;
+    margin-right: 17px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    border: 1px solid #99CEA8;
+    position: relative; 
+    transition: all 0.5s; 
+}
+
+.piriquito {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 24px; 
+    right: 10px;
+    backface-visibility: hidden;
+}
+.escondido {
+    display: none; 
+}
+
+.face {
+    transform: rotateY(180deg);
+}
+
+
+@media (max-width: 560px) {
+    .texto {
+        font-size: 36px;
+    }
+}
