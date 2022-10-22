@@ -1,10 +1,19 @@
 alert ("Bem-vindo ao jogo do piriquito que não é o Duolingo!");
+
 const nome = prompt ("Qual é o seu nome");
 
-let qtdCartas = prompt ("Com quantas cartas você deseja jogar? Números pares de 4 a 14.");
-while (qtdCartas != 4 && qtdCartas != 6 && qtdCartas != 8 && qtdCartas != 10 && qtdCartas != 12 && qtdCartas != 14 ) {
+let qtdCartas;
+
+comecar();
+
+function comecar () {
+    qtdCartas = prompt ("Com quantas cartas você deseja jogar? Números pares de 4 a 14.");
+
+    while (qtdCartas != 4 && qtdCartas != 6 && qtdCartas != 8 && qtdCartas != 10 && qtdCartas != 12 && qtdCartas != 14 ) {
     alert ("Quantidade de cartas inválidas!");
     qtdCartas = prompt ("Com quantas cartas você deseja jogar? Números pares de 4 a 14.");
+}
+
 }
 
 qtdCartas = Number(qtdCartas);
@@ -67,7 +76,6 @@ function compararCartas () {
         segundaCarta.classList.add ("acertou");
 
         contadorCartas += 2;
-        console.log (contadorCartas);
 
         primeiraCarta = undefined;
         segundaCarta = undefined;
@@ -90,8 +98,18 @@ function compararCartas () {
 
 function venceu () {
     if (contadorCartas === qtdCartas) {
-        alert (`Parabéns, ${nome} mizerávi! Você arrasou no jogo do piriquito, com ${contador} jogadas.`); 
+        clearInterval (pararContagem);
+        alert (`Acertou, ${nome} mizerávi! Você arrasou no jogo do piriquito, com ${(contador / 2)} jogadas, em apenas ${relogio} segundos.`);
     }
 }
 
-setTimeout (contadorCartas, )
+let pararContagem = setInterval(cronometro, 1000)
+
+let relogio = 0; 
+function cronometro () {
+    const tempo = document.querySelector (".relogio");
+    if (qtdCartas != undefined) {
+        relogio++; 
+        tempo.innerHTML = relogio; 
+    }
+}

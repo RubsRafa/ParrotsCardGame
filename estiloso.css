@@ -71,6 +71,15 @@ h1 {
     opacity: 0;
 }
 
+.tempo {
+    position: fixed; 
+    top: 100px; 
+    right: 100px;}
+span {
+    font-size: 25px;
+    font-family: Roboto;
+    color: #75B79E;
+}
 
 
 @media (max-width: 560px) {
