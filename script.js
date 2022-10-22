@@ -99,7 +99,7 @@ function compararCartas () {
 function venceu () {
     if (contadorCartas === qtdCartas) {
         clearInterval (pararContagem);
-        alert (`Acertou, ${nome} mizerávi! Você arrasou no jogo do piriquito, com ${(contador / 2)} jogadas, em apenas ${relogio} segundos.`);
+        alert (`Acertou, ${nome} mizerávi! Você arrasou no jogo do piriquito, com ${(contador)} jogadas, em apenas ${relogio} segundos.`);
     }
 }
 
