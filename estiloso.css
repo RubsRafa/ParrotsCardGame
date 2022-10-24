@@ -73,7 +73,7 @@ h1 {
 
 .tempo {
     position: fixed; 
-    top: 100px; 
+    top: 115px; 
     right: 100px;}
 span {
     font-size: 25px;
@@ -85,5 +85,11 @@ span {
 @media (max-width: 560px) {
     .texto {
         font-size: 36px;
+    }
+}
+@media (max-width: 547px) {
+    .cartas {
+        margin-top: 34px;
+        width: calc (100% - 240px); 
     }
 }

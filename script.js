@@ -1,7 +1,5 @@
 alert ("Bem-vindo ao jogo do piriquito que não é o Duolingo!");
 
-const nome = prompt ("Qual é o seu nome");
-
 let qtdCartas;
 
 comecar();
@@ -99,7 +97,9 @@ function compararCartas () {
 function venceu () {
     if (contadorCartas === qtdCartas) {
         clearInterval (pararContagem);
-        alert (`Acertou, ${nome} mizerávi! Você arrasou no jogo do piriquito, com ${(contador)} jogadas, em apenas ${relogio} segundos.`);
+        setTimeout (() => {
+        alert (`Acertou, mizerávi! Você arrasou no jogo do piriquito, com ${(contador)} jogadas, em apenas ${relogio} segundos.`);
+    }, 800)
     }
 }
 
